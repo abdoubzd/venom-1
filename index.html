@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voide Bot</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+  <canvas id="stars"></canvas>
+
+  <header>
+    <div class="logo">🚀 Voide Bot</div>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="commands.html">الأوامر</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="glow">مرحبا بك في عالم Voide</h1>
+      <p class="glow">بوت ديسكورد قوي ومميز لإدارة سيرفرك بكل احترافية.</p>
+      <h2 class="tagline">🚀 الاحتراف يبدأ بزر</h2>
+
+      <div class="buttons column">
+        <a href="https://discord.com/oauth2/authorize?client_id=1385558302812930079&permissions=8&integration_type=0&scope=bot" class="btn">➕ دعوة البوت</a>
+        <a href="commands.html" class="btn secondary">📜 عرض الأوامر</a>
+        <a href="https://discord.gg/MNpUK94qsD" class="btn support">🆘 الدعم الفني</a>
+      </div>
+
+      <div class="bot-card">
+        <h3>🤖 عن Voide Bot</h3>
+        <p>
+          Voide هو بوت ديسكورد متعدد المهام، يساعدك في التحكم بسيرفرك بسهولة وأمان.
+          يتميز بتحديثات مستمرة وتصميم بسيط وسلس. متاح للاستخدام المجاني بالكامل.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Voide Bot — Web Dev: <strong>Venom</strong> | Bot by: <strong>Venom</strong></p>
+  </footer>
+
+  <script src="stars.js"></script>
+  <script>
+    document.querySelectorAll('.btn').forEach(button => {
+      button.addEventListener('mousemove', e => {
+        const rect = button.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        button.style.setProperty('--x', `${x}px`);
+        button.style.setProperty('--y', `${y}px`);
+      });
+    });
+  </script>
+</body>
+</html>
